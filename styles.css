@@ -1,69 +1,177 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-img{
+
+img {
   vertical-align: top;
 }
 
-body{
+body {
   width: 100%;
+  min-height: 100vh;
   font-family: 'Kumbh Sans', sans-serif;
 }
-section{
+
+section {
   width: 100%;
   background-color: hsl(185, 75%, 39%);
-  min-height:100vh;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
-
 }
 
-.bg_img_1, .bg_img_2{
+.bg_img_1, .bg_img_2 {
   width: 60%;
   position: absolute;
   z-index: 1;
 }
 
-.bg_img_1 img, .bg_img_2 img{
+.bg_img_1 img, .bg_img_2 img {
   width: 100%;
 }
 
-.bg_img_1{
+.bg_img_1 {
   transform: translateY(-50%);
   right: 50%;
   top: 0;
 }
-.bg_img_2{
+
+.bg_img_2 {
   transform: translateY(50%);
   bottom: 0;
   left: 50%;
 }
 
-.card{
+.card {
   position: absolute;
-	z-index:2;
-	background:#fff;
-	border-radius:1em;
-	box-shadow:0 4rem 5rem rgba(0,0,0,.2);
+  z-index: 2;
+  background: #fff;
+  border-radius: 1em;
+  box-shadow: 0 4rem 5rem rgba(0, 0, 0, .2);
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
-	max-width:min(600px, 94%);
-
+  transform: translate(-50%, -50%);
+  max-width: min(600px, 94%);
 }
 
-.card div{
-  width: 100%;
+.card div {
+  max-width: 100%;
 }
 
-
-.bg-card-img{
+.bg-card-img {
+  background-image: url(images/bg-pattern-card.svg);
   background-size: cover;
   background-position: center center;
   border-radius: 1em 1em 0 0;
-  width: 22rem;
   height: 8.5em;
-  background-image: url(images/bg-pattern-card.svg);
+  width: 22rem;
+}
+
+.profile {
+  width: 22rem;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.profile-img {
+  height: 3em;
+  text-align: center;
+  position: relative;
+  width: 24em;
+}
+
+.profile-img-border {
+  position: absolute;
+  z-index: 1 !important;
+  width: 6.7rem;
+  height: 6.7rem;
+  background: #fff;
+  display: block;
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  background-image: url(images/image-victor.jpg);
+  background-size: cover;
+  background-position: center center;
+  left: 50%;
+  z-index: 2;
+}
+
+.profile-info {
+  text-align: center;
+  width: 22rem;
+  padding: 1.5em 0 .7em 0;
+  font-weight: 700;
+  color: hsl(229, 23%, 23%);
+  font-size: 1.1em;
+}
+
+.profile-info span {
+  font-weight: 400;
+  color: hsl(227, 10%, 46%);
+  margin-left: .5rem;
+}
+
+.city {
+  text-align: center;
+  font-size: .9em;
+  padding-bottom: 1.5rem;
+  color: hsl(227, 10%, 46%);
+}
+
+.numbers {
+  width: 22rem;
+  display: flex;
+  padding: 1.7rem 2rem;
+  color: hsl(229, 23%, 23%);
+}
+
+.numbers div {
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: center;
+}
+
+.numbers h3 {
+  font-size: 1.1rem;
+}
+
+.numbers p {
+  font-size: .6em;
+  padding: .4rem 0 0 0;
+  letter-spacing: 1px;
+  color: hsl(227, 10%, 46%);
+}
+
+@media screen and (max-width: 699px) {
+  .bg_img_1, .bg_img_2 {
+    position: absolute;
+    height: 60%;
+    z-index: 1;
+  }
+
+  .bg_img_1 img, .bg_img_2 img {
+    height: 100%;
+  }
+
+  .bg_img_1 {
+    transform: translateY(-50%);
+    right: 50%;
+    top: 0;
+  }
+
+  .bg_img_2 {
+    transform: translateY(50%);
+    left: 50%;
+    bottom: 0;
+  }
 }
